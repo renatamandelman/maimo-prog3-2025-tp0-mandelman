@@ -1,0 +1,173 @@
+*{
+    box-sizing: content-box;
+    list-style: none;
+}
+a{
+  text-decoration: none;
+  color:black;
+}
+body{
+    padding:0;
+    margin:0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+  h1,h2,h3{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+  }
+  h1{
+    font-size:40px;
+    line-height:45px;
+  }
+  h2{
+    font-size:30px;
+    line-height:35px;
+  }
+  
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #EAD196;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+header .logo_container img{
+    width: 50px;
+}
+header ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap:20px;
+}
+header li a{
+  color:#7D0A0A;
+}
+.hero{
+  text-transform: uppercase;
+    height:400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/imgs/banner.jpg');
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+}
+.recipe .hero::after, .hero::after {
+  content: "";
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+  width: 100%;
+  height: 400px;
+  background-color: rgba(169, 169, 169, 0.4); /* Agrega una capa oscura semitransparente */
+}
+.hero h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 3rem;
+  color:#EEEEEE;
+  word-spacing: 0.2em;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.189); /* Sombra negra semitransparente */
+
+}
+.recetas_grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap:20px;
+}
+.boxed{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.receta{
+    grid-column: span 3;
+    background-color: #7D0A0A;
+    padding:0.5em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+.receta img{
+    width:100%;
+    border-radius: 1em;
+}
+.receta svg {
+  width:2em;
+  height:2em;
+ color: #EAD196;
+}
+.receta div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:80%;
+}
+.receta h3{
+  margin-bottom:0.2em;
+}
+.receta h5{
+  background-color: #EAD196;
+  color:#7D0A0A;
+  padding: 0.5em;
+  border-radius: 1em;
+}
+.information{
+  display: flex;
+  padding:1em;
+  justify-content: space-between;
+  width:80%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.ingredients li{
+  list-style-type:circle;
+  padding:0.5em;
+}
+.instructions li{
+  list-style-type:decimal;
+  padding:0.5em;
+}
+.informationSection{
+  justify-content: center;
+  display: flex;
+}
+.instructions{
+  background-color: #f87c7c;
+  padding: 1em;
+  border-radius: 1em;
+  width:50%;
+}
+.cornerIcon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  background-color: #7D0A0A;
+  padding:0.5em;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  color:#EEEEEE
+}
+
+
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #ddd;
+    /* position: fixed;
+    bottom: 0;
+    left:0; */
+    margin-top:0.5em;
+    width: 100%;
+
+}
