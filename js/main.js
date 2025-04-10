@@ -5,6 +5,12 @@ const main = async () => {
   console.log(recipesData);
 
   const recipesGrid = document.querySelector(".recetas_grid");
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.querySelector('.nav_links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
 
   recipesData.recipes.forEach((recipe) => {
     recipesGrid.innerHTML += `
